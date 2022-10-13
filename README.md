@@ -27,7 +27,7 @@ nvidia-docker run -it -p 9000:9000 -e GRANT_SUDO=yes --user root --name tensorrt
 
 Contents
 =============
-#### - [Converting Pytorch to onnx]()
+#### - [Converting Pytorch to onnx](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/convert_pytorch_to_onnx/convert_pytorch_to_onnx.py)
   - Details: https://blog.naver.com/qbxlvnf11/222342675767
   - Export onnx
   - Load onnx
@@ -35,7 +35,7 @@ Contents
   - Comparision output of onnx and output of Pytorch (same or not)
   - Dynamic axes (implicit batch)
 
-#### - [Converting onnx to TensorRT]()
+#### - [Converting onnx to TensorRT](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/convert_onnx_to_tensorrt.ipynb)
   - Build & save TensorRT engine
   - Key trtexec options
     - Precision of engine: TF32, FP32, FP16, ...
@@ -43,13 +43,13 @@ Contents
     - minShapes: set the max input data size of model for inference
     - maxShapes: set the min input data size of model for inference
 
-#### - [Converting onnx to TensorRT]()
+#### - [Converting onnx to TensorRT](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/tensorrt_engine_inference/tensorrt_engine_inference.py)
   - Load TensorRT engine
   - Inference TensorRT engine
   - Comparision output of TensorRT and output of onnx
   - Comparision of time efficiency
   
-Examples of inferencing ResNet18 with TensorRT engine and evaluation of inference time (time efficiency)
+Examples of inferencing ResNet18 with TensorRT
 =============
 
 #### - Converting Pytorch model to onnx
