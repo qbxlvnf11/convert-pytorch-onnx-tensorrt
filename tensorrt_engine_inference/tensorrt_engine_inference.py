@@ -36,13 +36,13 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Convert ONNX models to TensorRT')
     parser.add_argument('--device', help='cuda or not',
         default='cuda:0')
-    parser.add_argument('--onnx_model_path', help='onnx mode path (not dynamic axes)',
+    parser.add_argument('--onnx_model_path', help='onnx model path',
         default='./onnx_output.onnx')    
     parser.add_argument('--batch_size', type=int, help='data batch size',
         default=1)
     parser.add_argument('--img_size', help='input size',
         default=[1, 3, 224, 224])
-    parser.add_argument('--tensorrt_engine_path',  help='experted onnx path',
+    parser.add_argument('--tensorrt_engine_path',  help='tensorrt engine path',
         default='./tensorrt_engine.engine')
     #parser.add_argument('--sample_image_path', help='sample image path',
         #default='./sample.jpg')
