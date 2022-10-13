@@ -93,11 +93,6 @@ def load_image_folder(folder_path, img_size, batch_size):
     
     return torch_images.cpu().numpy()
 
-def model_train():
-  
-  criterion = nn.CrossEntropyLoss()
-  optimizer = optim.Adam()
-
 if __name__ == '__main__':
     args = parse_args()
 
