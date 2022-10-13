@@ -32,7 +32,7 @@ def parse_args():
         default=[1, 3, 224, 224])
     parser.add_argument('--batch_size', type=int, help='onnx sample batch size',
         default=1)
-    parser.add_argument('--output_path',  help='experted onnx path',
+    parser.add_argument('--output_path',  help='onnx model path',
         default='./onnx_output.onnx')
     #parser.add_argument('--sample_image_path', help='sample image path',
         #default='./sample.jpg')
