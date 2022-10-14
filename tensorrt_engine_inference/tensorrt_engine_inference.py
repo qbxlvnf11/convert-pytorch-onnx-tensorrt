@@ -168,7 +168,7 @@ if __name__ == '__main__':
     
     # TensorRT inference
     # Set host input to the image. The common.do_inference function will copy the input to the GPU before executing.
-    inputs[0].host = img_resize[:5]
+    inputs[0].host = img_resize
     
     trt_start_time = time.time()
     trt_outputs = do_inference_v2(context, bindings=bindings, inputs=inputs, outputs=outputs, stream=stream)
