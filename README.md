@@ -62,7 +62,7 @@ python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes true
   - Build TensorRT engine with textexec command in convert_onnx_to_tensorrt.ipynb
   - Run jupyter notebook in TensorRT Docker environment
   ```
-  jupyter notebook --ip='0.0.0.0' --port=9000 --allow-root
+  jupyter notebook --ip='0.0.0.0' --port={docker_env_port} --allow-root
   ```
 
 #### - TensorRT Engine inference
