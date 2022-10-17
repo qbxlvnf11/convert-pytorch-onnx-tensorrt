@@ -75,7 +75,7 @@ Examples of inferencing ResNet18 with TensorRT
   
   - Converting onnx to TensorRT and test time efficiency (FP32)
   ```
-  python convert_onnx_to_tensorrt/tensorrt_engine_inference.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP32_implicit.engine --engine_precision FP32 
+  python convert_onnx_to_tensorrt/convert_onnx_to_tensorrt.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP32_implicit.engine --engine_precision FP32 
   ```  
 
   - Converting onnx to TensorRT and test time efficiency (FP16)
