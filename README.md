@@ -30,37 +30,48 @@ Contents
 =============
 #### - [Converting Pytorch to onnx](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/convert_pytorch_to_onnx/convert_pytorch_to_onnx.py)
   - Details: https://blog.naver.com/qbxlvnf11/222342675767
-  - Export onnx
-  - Load onnx
+  - Export & load onnx
   - Inference onnx
-  - Comparision output of onnx and output of Pytorch (same or not)
-  - Dynamic axes or not (explicit batch or implicit batch)
+  - Compare output and time efficiency between onnx and pytorch
+  - Setting batch size of input data: explicit batch or implicit batch
 
-#### - [Converting onnx to TensorRT and test time efficiency]()
+#### - [Converting onnx to TensorRT and test time efficiency](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/convert_onnx_to_tensorrt/tensorrt_engine_inference.py)
   - Build & load TensorRT engine
+  - Setting batch size of input data: explicit batch or implicit batch
   - Key trtexec options
-    - Precision of engine: TF32, FP32, FP16, ...
+    - Precision of engine: FP32, FP16
     - optShapes: set the most used input data size of model for inference
     - minShapes: set the max input data size of model for inference
     - maxShapes: set the min input data size of model for inference  
-  - Dynamic axes or not (explicit batch or implicit batch)
-  - Load TensorRT engine
   - Inference TensorRT engine
-  - Comparision output of TensorRT and output of onnx
-  - Comparision of time efficiency
+  - Compare output and time efficiency among tensorrt and onnx and pytorch
   
 Examples of inferencing ResNet18 with TensorRT
 =============
 
-#### - Converting Pytorch model to onnx (implicit batch)
-```
-python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes False --output_path onnx_output_implicit.onnx --batch_size {batch_size}
-```
+#### - Implicit batch
+  - Converting Pytorch model to onnx
+  ```
+  python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes False --output_path onnx_output_implicit.onnx --batch_size {batch_size}
+  ```
+  
+  - Converting onnx to TensorRT and test time efficiency (FP32)
+    - Setting three parameters (minShapes, optShapes, maxShapes) according to the inference environment
+  ```
+  python tensorrt_engine_inference/tensorrt_engine_inference.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP32_implicit.engine --engine_precision FP32 
+  ```  
 
-#### - Converting Pytorch model to onnx (explicit batch)
-```
-python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes True --output_path onnx_output_explicit.onnx --batch_size {batch_size}
-```
+  - Converting onnx to TensorRT and test time efficiency (FP16)
+    - Setting three parameters (minShapes, optShapes, maxShapes) according to the inference environment
+  ```
+  python tensorrt_engine_inference/tensorrt_engine_inference.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP16_implicit.engine --engine_precision FP16 
+  ```  
+
+#### - Explicit batch
+  - Converting Pytorch model to onnx
+  ```
+  python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes True --output_path onnx_output_explicit.onnx --batch_size {batch_size}
+  ```
 
 #### - Converting onnx to TensorRT
   - Refer to 'Converting onnx to TensorRT and test time efficiency' in Contents section
