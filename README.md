@@ -83,12 +83,25 @@ Examples of inferencing ResNet18 with TensorRT
   python convert_onnx_to_tensorrt/convert_onnx_to_tensorrt.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP16_implicit.engine --engine_precision FP16 
   ```  
 
-#### - Comparision of time efficiency
-  - Time efficiency (vary from case to case)
-    - onnx: 0.010984
-    - TensorRT (TF32): 0.000288
-    - TensorRT (FP16): 0.000240
-  
+#### - Comparision of time efficiency and output
+  - Explicit batch test of FP32 TensorRT engine
+    - Batch size of inf data = 1
+    - Batch size of optShapes = 1
+    <img src="https://user-images.githubusercontent.com/52263269/196143388-9508444c-29ac-481a-abe4-3297e27dbdb7.png" width="35%"></img>
+
+  - Explicit batch test of FP16 TensorRT engine
+    - Batch size of inf data = 1
+    - Batch size of optShapes = 1
+    <img src="https://user-images.githubusercontent.com/52263269/196143922-f42d3e5b-431c-4f34-acfc-84debe0dba3e.png" width="35%"></img>
+
+  - Implicit batch test of FP32 TensorRT engine
+    - Batch size of inf data = 1
+    <img src="https://user-images.githubusercontent.com/52263269/196143184-16a70676-eaf0-4e38-89a0-96030939619d.png" width="35%"></img>
+
+  - Implicit batch test of FP16 TensorRT engine
+    - Batch size of inf data = 1
+    <img src="https://user-images.githubusercontent.com/52263269/196143568-3794c96f-d530-455f-861e-b14d63c2c04e.png" width="35%"></img>
+
 References
 =============
 
