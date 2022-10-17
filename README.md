@@ -96,6 +96,13 @@ Examples of inferencing ResNet18 with TensorRT
     
     <img src="https://user-images.githubusercontent.com/52263269/196143922-f42d3e5b-431c-4f34-acfc-84debe0dba3e.png" width="35%"></img>
 
+
+  - Explicit batch test of FP16 TensorRT engine
+    - Batch size of inf data = 8
+    - Batch size of optShapes = 1
+    
+    <img src="https://user-images.githubusercontent.com/52263269/196144388-bd83d533-bb6c-4a82-b021-86c341155fad.png" width="35%"></img>
+
   - Implicit batch test of FP32 TensorRT engine
     - Batch size of inf data = 1
     
