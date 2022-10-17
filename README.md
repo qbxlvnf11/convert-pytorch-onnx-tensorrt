@@ -36,15 +36,14 @@ Contents
   - Comparision output of onnx and output of Pytorch (same or not)
   - Dynamic axes or not (explicit batch or implicit batch)
 
-#### - [Converting onnx to TensorRT](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/convert_onnx_to_tensorrt.ipynb)
-  - Build & save TensorRT engine
+#### - [Converting onnx to TensorRT and test time efficiency]()
+  - Build & load TensorRT engine
   - Key trtexec options
     - Precision of engine: TF32, FP32, FP16, ...
     - optShapes: set the most used input data size of model for inference
     - minShapes: set the max input data size of model for inference
-    - maxShapes: set the min input data size of model for inference
-
-#### - [Converting onnx to TensorRT](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/tensorrt_engine_inference/tensorrt_engine_inference.py)
+    - maxShapes: set the min input data size of model for inference  
+  - Dynamic axes or not (explicit batch or implicit batch)
   - Load TensorRT engine
   - Inference TensorRT engine
   - Comparision output of TensorRT and output of onnx
@@ -55,21 +54,18 @@ Examples of inferencing ResNet18 with TensorRT
 
 #### - Converting Pytorch model to onnx (implicit batch)
 ```
-python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes False --output_path onnx_output_implicit.onnx --batch_size 1
+python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes False --output_path onnx_output_implicit.onnx --batch_size {batch_size}
 ```
 
 #### - Converting Pytorch model to onnx (explicit batch)
 ```
-python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes True --output_path onnx_output_explicit.onnx --batch_size 1
+python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes True --output_path onnx_output_explicit.onnx --batch_size {batch_size}
 ```
 
 #### - Converting onnx to TensorRT
-  - Refer to 'Converting onnx to TensorRT' in Contents section
-  - Build TensorRT engine with textexec command in convert_onnx_to_tensorrt.ipynb
-  - Run jupyter notebook in TensorRT Docker environment
-  ```
-  jupyter notebook --ip='0.0.0.0' --port={docker_env_port} --allow-root
-  ```
+  - Refer to 'Converting onnx to TensorRT and test time efficiency' in Contents section
+  - Build TensorRT engine with textexec command in convert_onnx_to_tensorrt.py
+  - 
 
 #### - TensorRT Engine inference
 ```
@@ -100,10 +96,6 @@ https://docs.nvidia.com/deeplearning/tensorrt/container-release-notes/rel_21-08.
 #### - TensorRT8 code
 
 https://github.com/NVIDIA/trt-samples-for-hackathon-cn/blob/master/cookbook/04-Parser/pyTorch-ONNX-TensorRT/main.py
-
-#### - TF32
-
-https://blogs.nvidia.co.kr/2020/05/22/tensorfloat-32-precision-format/
 
 #### - ImageNet 1000 samples
 
