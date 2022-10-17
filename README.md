@@ -10,6 +10,7 @@ Description
 #### - TensorRT
   - NVIDIA SDK for high-performance deep learning inference
   - Deep learning inference optimizer and runtime that delivers low latency and high throughput for deep learning inference applications
+  - Explicit batch is required when you are dealing with Dynamic shapes, otherwise network will be created using implicit batch dimension.
   - More details about TensorRT: https://blog.naver.com/qbxlvnf11/222403199156
   
 TensorRT Docker Environment
