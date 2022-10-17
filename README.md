@@ -97,9 +97,9 @@ https://developer.nvidia.com/tensorrt
 
 https://docs.nvidia.com/deeplearning/tensorrt/container-release-notes/rel_21-08.html#rel_21-08
 
-#### - TensorRT8 inference code
+#### - TensorRT8 code
 
-https://github.com/NVIDIA/trt-samples-for-hackathon-cn/blob/master/cookbook/01-SimpleDemo/TensorRT8/main-cuda.py
+https://github.com/NVIDIA/trt-samples-for-hackathon-cn/blob/master/cookbook/04-Parser/pyTorch-ONNX-TensorRT/main.py
 
 #### - TF32
 
