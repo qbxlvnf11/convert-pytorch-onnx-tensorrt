@@ -35,7 +35,7 @@ Contents
   - Compare output and time efficiency between onnx and pytorch
   - Setting batch size of input data: explicit batch or implicit batch
 
-#### - [Converting onnx to TensorRT and test time efficiency](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/convert_onnx_to_tensorrt/tensorrt_engine_inference.py)
+#### - [Converting onnx to TensorRT and test time efficiency](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/convert_onnx_to_tensorrt/convert_onnx_to_tensorrt.py)
   - Build & load TensorRT engine
   - Setting batch size of input data: explicit batch or implicit batch
   - Key trtexec options
