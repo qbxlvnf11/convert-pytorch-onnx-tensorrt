@@ -58,13 +58,13 @@ Examples of inferencing ResNet18 with TensorRT
   - Converting onnx to TensorRT and test time efficiency (FP32)
     - Setting three parameters (minShapes, optShapes, maxShapes) according to the inference environment
   ```
-  python tensorrt_engine_inference/tensorrt_engine_inference.py --dynamic_axes True --onnx_model_path onnx_output_explicit.onnx --batch_size {batch_size} --tensorrt_engine_path FP32_explicit.engine --engine_precision FP32 
+  python convert_onnx_to_tensorrt/convert_onnx_to_tensorrt.py --dynamic_axes True --onnx_model_path onnx_output_explicit.onnx --batch_size {batch_size} --tensorrt_engine_path FP32_explicit.engine --engine_precision FP32 
   ```  
 
   - Converting onnx to TensorRT and test time efficiency (FP16)
     - Setting three parameters (minShapes, optShapes, maxShapes) according to the inference environment
   ```
-  python tensorrt_engine_inference/tensorrt_engine_inference.py --dynamic_axes True --onnx_model_path onnx_output_explicit.onnx --batch_size {batch_size} --tensorrt_engine_path FP16_explicit.engine --engine_precision FP16 
+  python convert_onnx_to_tensorrt/convert_onnx_to_tensorrt.py --dynamic_axes True --onnx_model_path onnx_output_explicit.onnx --batch_size {batch_size} --tensorrt_engine_path FP16_explicit.engine --engine_precision FP16 
   ```  
 
 #### - Implicit batch
@@ -75,12 +75,12 @@ Examples of inferencing ResNet18 with TensorRT
   
   - Converting onnx to TensorRT and test time efficiency (FP32)
   ```
-  python tensorrt_engine_inference/tensorrt_engine_inference.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP32_implicit.engine --engine_precision FP32 
+  python convert_onnx_to_tensorrt/tensorrt_engine_inference.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP32_implicit.engine --engine_precision FP32 
   ```  
 
   - Converting onnx to TensorRT and test time efficiency (FP16)
   ```
-  python tensorrt_engine_inference/tensorrt_engine_inference.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP16_implicit.engine --engine_precision FP16 
+  python convert_onnx_to_tensorrt/convert_onnx_to_tensorrt.py --dynamic_axes False --onnx_model_path onnx_output_implicit.onnx --batch_size {batch_size_of_implicit_batch_onnx_model} --tensorrt_engine_path FP16_implicit.engine --engine_precision FP16 
   ```  
 
 #### - Comparision of time efficiency
