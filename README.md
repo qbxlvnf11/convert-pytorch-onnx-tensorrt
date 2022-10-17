@@ -33,7 +33,7 @@ Contents
   - Load onnx
   - Inference onnx
   - Comparision output of onnx and output of Pytorch (same or not)
-  - Dynamic axes (implicit batch)
+  - Dynamic axes or not (explicit batch or implicit batch)
 
 #### - [Converting onnx to TensorRT](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-21.08/convert_onnx_to_tensorrt.ipynb)
   - Build & save TensorRT engine
@@ -52,9 +52,14 @@ Contents
 Examples of inferencing ResNet18 with TensorRT
 =============
 
-#### - Converting Pytorch model to onnx
+#### - Converting Pytorch model to onnx (implicit batch)
 ```
-python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes true
+python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes False --output_path onnx_output_implicit.onnx --batch_size 1
+```
+
+#### - Converting Pytorch model to onnx (explicit batch)
+```
+python convert_pytorch_to_onnx/convert_pytorch_to_onnx.py --dynamic_axes True --output_path onnx_output_explicit.onnx --batch_size 1
 ```
 
 #### - Converting onnx to TensorRT
