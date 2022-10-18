@@ -60,11 +60,11 @@ def parse_args():
         default='True')
     parser.add_argument('--engine_precision', help='precision of TensorRT engine', choices=['FP32', 'FP16'], 
     	default='FP32')
-    parser.add_argument('--min_engine_batch_size', type=int, help='set the max input data size of model for inference', 
+    parser.add_argument('--min_engine_batch_size', type=int, help='set the min input data size of model for inference', 
     	default=1)
     parser.add_argument('--opt_engine_batch_size', type=int, help='set the most used input data size of model for inference', 
     	default=1)
-    parser.add_argument('--max_engine_batch_size', type=int, help='set the min input data size of model for inference', 
+    parser.add_argument('--max_engine_batch_size', type=int, help='set the max input data size of model for inference', 
     	default=8)
     parser.add_argument('--engine_workspace', type=int, help='workspace of engine', 
     	default=1024)
