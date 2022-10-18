@@ -52,7 +52,7 @@ def parse_args():
     parser.add_argument('--export_params', help='If specified, all parameters will be exported. Set this to False if you want to export an untrained model.',
         default='True')
     parser.add_argument('--opset_version', type=int, help='opset version',
-        default=10) 
+        default=11) 
         
     args = string_to_bool(parser.parse_args())
 
