@@ -12,19 +12,6 @@ Description
   - Deep learning inference optimizer and runtime that delivers low latency and high throughput for deep learning inference applications
   - Explicit batch is required when you are dealing with Dynamic shapes, otherwise network will be created using implicit batch dimension.
   - More details about TensorRT: https://blog.naver.com/qbxlvnf11/222403199156
-  
-TensorRT Docker Environment
-=============
-
-#### - Download TensorRT Docker environment
-```
-docker pull qbxlvnf11docker/tensorrt_21.08
-```
-
-#### - Run TensorRT Docker environment
-```
-nvidia-docker run -it -p 9000:9000 -e GRANT_SUDO=yes --user root --name tensorrt_21.08_env -v {code_folder_path}:/workspace -w /workspace qbxlvnf11docker/tensorrt_21.08:latest bash
-```
 
 Contents
 =============
@@ -45,7 +32,20 @@ Contents
     - maxShapes: set the min input data size of model for inference  
   - Inference TensorRT engine
   - Compare output and time efficiency among tensorrt and onnx and pytorch
-  
+
+TensorRT Docker Environment
+=============
+
+#### - Download TensorRT Docker environment
+```
+docker pull qbxlvnf11docker/tensorrt_21.08
+```
+
+#### - Run TensorRT Docker environment
+```
+nvidia-docker run -it -p 9000:9000 -e GRANT_SUDO=yes --user root --name tensorrt_21.08_env -v {code_folder_path}:/workspace -w /workspace qbxlvnf11docker/tensorrt_21.08:latest bash
+```
+
 Examples of inferencing ResNet18 with TensorRT
 =============
 
