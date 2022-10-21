@@ -165,7 +165,7 @@ def build_engine(onnx_model_path, tensorrt_engine_path, engine_precision, dynami
     with open(tensorrt_engine_path, "wb") as f:
         f.write(engineString)
         
-def trt_inference(engine, context, data, batch_size, img_size, device):  
+def trt_inference(engine, context, data, batch_size, device):  
     
     nInput = np.sum([engine.binding_is_input(i) for i in range(engine.num_bindings)])
     nOutput = engine.num_bindings - nInput
@@ -227,7 +227,7 @@ def main():
     context.set_binding_shape(0, (args.batch_size, args.img_size[0], args.img_size[1], args.img_size[2]))
     
     trt_start_time = time.time()
-    trt_outputs = trt_inference(engine, context, img_resize, args.batch_size, args.img_size, args.device)
+    trt_outputs = trt_inference(engine, context, img_resize, args.batch_size, args.device)
     trt_outputs = np.array(trt_outputs[1]).reshape(args.batch_size, -1)
     trt_end_time = time.time()
     
