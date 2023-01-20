@@ -3,7 +3,7 @@
 Description
 =============
 
-#### - TensorRT engine convertor of various TensorRT versions (refer to each branch)
+#### - TensorRT engine converter of various TensorRT versions (refer to each branch or tag)
 
 #### - ONNX (Open Neural Network Exchange)
   - Standard format for expressing machine learning algorithms and models
