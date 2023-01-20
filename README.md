@@ -3,7 +3,7 @@
 Description
 =============
 
-#### - TensorRT engine convertor of various TensorRT versions (refer to each branch or tag)
+#### - TensorRT engine converter of various TensorRT versions (refer to each branch or tag)
 
 #### - ONNX (Open Neural Network Exchange)
   - Standard format for expressing machine learning algorithms and models
@@ -30,7 +30,7 @@ Description
 
 Contents
 =============
-#### - Converting Pytorch to onnx
+#### - [Converting Pytorch to onnx]
   - Details: https://blog.naver.com/qbxlvnf11/222342675767
   - Export onnx
   - Load onnx
@@ -38,7 +38,7 @@ Contents
   - Comparision output of onnx and output of Pytorch (same or not)
   - Dynamic axes (implicit batch)
 
-#### - Converting onnx to TensorRT
+#### - [Converting onnx to TensorRT](https://github.com/qbxlvnf11/convert-pytorch-onnx-tensorrt/blob/TensorRT-20.12/convert_onnx_to_tensorrt/convert_onnx_to_tensorrt.py)
   - Build TensorRT engine
   - Save TensorRT engine
   - Load TensorRT engine
