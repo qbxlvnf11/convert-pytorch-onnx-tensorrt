@@ -14,19 +14,6 @@ Description
   - Deep learning inference optimizer and runtime that delivers low latency and high throughput for deep learning inference applications
   - More details about TensorRT: https://blog.naver.com/qbxlvnf11/222403199156
   - Setting TensorRT environment using Docker: https://blog.naver.com/qbxlvnf11/222441230287
-  
-Description
-=============
-
-#### - ONNX (Open Neural Network Exchange)
-  - Standard format for expressing machine learning algorithms and models
-  - More details about ONNX: https://en.wikipedia.org/wiki/Open_Neural_Network_Exchange
-
-#### - TensorRT
-  - NVIDIA SDK for high-performance deep learning inference
-  - Deep learning inference optimizer and runtime that delivers low latency and high throughput for deep learning inference applications
-  - More details about TensorRT: https://blog.naver.com/qbxlvnf11/222403199156
-  - Setting TensorRT environment using Docker: https://blog.naver.com/qbxlvnf11/222441230287
 
 Contents
 =============
